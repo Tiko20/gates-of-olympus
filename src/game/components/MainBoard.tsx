@@ -32,7 +32,6 @@ export const MainBoard = () => {
         setTimeout(() => {
           const finalBoard = insertNewSquares(cleanedBoard);
           setMainBoard(finalBoard);
-          console.log("Final board:", finalBoard);
         }, 600);
       }, 400);
     }, 200);

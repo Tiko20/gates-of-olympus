@@ -15,8 +15,8 @@ export const getWinningSymbols = (board: SquareModel[][]) => {
     zeus: 0,
   };
 
-  board.forEach((row, rowIndex) => {
-    row.forEach((square, index) => {
+  board.forEach((row, _) => {
+    row.forEach((square, _) => {
       if (square.id in gameSymbolsDefaultValues) {
         gameSymbolsDefaultValues[square.id]++;
         return { ...square, isDeleted: true };
@@ -32,15 +32,4 @@ export const getWinningSymbols = (board: SquareModel[][]) => {
       return null;
     })
     .filter(Boolean) as WinningSymbolResult[];
-};
-const gameSymbols = {
-  blueGem: "💎 Blue Gem",
-  greenGem: "💚 Green Gem",
-  yellowGem: "💛 Yellow Gem",
-  purpleGem: "💜 Purple Gem",
-  goblet: "🍷 Goblet",
-  ring: "💍 Ring",
-  hourglass: "⏳ Hourglass",
-  zeus: "⚡ Zeus",
-  //   scatter: "🌩️ Scatter (Lightning Bolt)"
 };
