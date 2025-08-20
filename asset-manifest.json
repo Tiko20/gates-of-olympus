@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Tiko20/gates-of-olympus.git/static/css/main.e6c13ad2.css",
+    "main.js": "/Tiko20/gates-of-olympus.git/static/js/main.259e7147.js",
+    "static/js/453.00efb8ba.chunk.js": "/Tiko20/gates-of-olympus.git/static/js/453.00efb8ba.chunk.js",
+    "index.html": "/Tiko20/gates-of-olympus.git/index.html",
+    "main.e6c13ad2.css.map": "/Tiko20/gates-of-olympus.git/static/css/main.e6c13ad2.css.map",
+    "main.259e7147.js.map": "/Tiko20/gates-of-olympus.git/static/js/main.259e7147.js.map",
+    "453.00efb8ba.chunk.js.map": "/Tiko20/gates-of-olympus.git/static/js/453.00efb8ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.259e7147.js"
+  ]
+}
