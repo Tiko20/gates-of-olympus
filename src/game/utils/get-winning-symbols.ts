@@ -9,8 +9,10 @@ export const getWinningSymbols = (board: SquareModel[][]) => {
     greenGem: 0,
     yellowGem: 0,
     purpleGem: 0,
+    redGem: 0,
     goblet: 0,
     ring: 0,
+    crown: 0,
     hourglass: 0,
     zeus: 0,
   };
