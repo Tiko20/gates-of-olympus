@@ -1,11 +1,11 @@
-import { SquareModel } from "../models/square-model";
+import { GameBoardModel } from "../models/game-board.model";
 
-export const boardCleaner = (board: SquareModel[][]) => {
+export const boardCleaner = (board: GameBoardModel) => {
   // Count all symbols
   const counts: Record<string, number> = {};
 
   board.flat().forEach((cell) => {
-    counts[cell.id] = (counts[cell.id] || 0) + 1;
+    counts[cell.name] = (counts[cell.name] || 0) + 1;
   });
 
   // Find symbols with >= 8
@@ -16,5 +16,7 @@ export const boardCleaner = (board: SquareModel[][]) => {
   );
 
   // Return new board with removed cells (null instead of symbol)
-  return board.map((row) => row.filter((cell) => !symbolsToRemove.has(cell.id)));
+  return board.map((row) =>
+    row.filter((cell) => !symbolsToRemove.has(cell.name))
+  );
 };

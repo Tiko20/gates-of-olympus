@@ -1,23 +1,23 @@
-import  { FC } from "react";
+import { FC } from "react";
 import "./style/symbolCard.css";
+import { SymbolModel } from "../../models/symbol.model";
+import { symbolsImages } from "../../configs/symbols-images.config";
 
 interface SymbolCardProps {
-  imgSRC: string;
-  name: string;
-  isDeleted?: boolean;
+  square: SymbolModel;
 }
 
-const SymbolCard: FC<SymbolCardProps> = ({
-  imgSRC,
-  name,
-  isDeleted = false,
-}) => {
+const SymbolCard: FC<SymbolCardProps> = ({ square }) => {
   return (
     <div className="symbol-card">
-      {isDeleted ? (
+      {square.isDeleted ? (
         <div className="boom"></div>
       ) : (
-        <img src={imgSRC} alt={name} className="symbol-card-image" />
+        <img
+          src={symbolsImages[square.name]}
+          alt={square.name}
+          className="symbol-card-image"
+        />
       )}
     </div>
   );

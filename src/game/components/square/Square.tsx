@@ -3,24 +3,20 @@ import "./style/square.css";
 import { GameSymbolsEnum } from "../../models/game-symbols.enum";
 import { MultiplierSymbol } from "../multiplier-symbols/MultiplierSymbol";
 import SymbolCard from "../symbol-card/SymbolCard";
+import { SymbolModel } from "../../models/symbol.model";
+import { MultiplierModel } from "../../models/multiplier.model";
 
 interface SquareProps {
-  name: GameSymbolsEnum;
-  isDeleted: boolean;
-  imgSRC: string;
+  square: SymbolModel | MultiplierModel;
 }
 
-export const Square: FC<SquareProps> = ({ imgSRC, isDeleted, name }) => {
+export const Square: FC<SquareProps> = ({ square }) => {
   return (
-    <div className={`square ${isDeleted ? "deleted" : ""}`}>
-      {name === GameSymbolsEnum.ZEUS ? (
-        <MultiplierSymbol value={1000} />
+    <div className="square">
+      {square.name === GameSymbolsEnum.ZEUS ? (
+        <MultiplierSymbol square={square} />
       ) : (
-        <SymbolCard
-          imgSRC={imgSRC}
-          isDeleted={isDeleted}
-          name={name}
-        />
+        <SymbolCard square={square} />
       )}
     </div>
   );
