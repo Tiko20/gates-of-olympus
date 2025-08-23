@@ -1,14 +1,27 @@
-import { SquareModel } from "../models/square-model";
-import { generateSquare } from "./generate-square";
+import { GameBoardModel } from "../models/game-board.model";
+import { GameSymbolsEnum } from "../models/game-symbols.enum";
+import { generateSymbol } from "./generate-symbol";
+import { getMultiplierColorAndValue } from "./get-multiplier-color-and-value";
 
-export const insertNewSquares = (board: SquareModel[][]): SquareModel[][] => {
+export const insertNewSquares = (board: GameBoardModel): GameBoardModel => {
   return board.map((col, _) => {
     const newCol = [...col];
     while (newCol.length < 5) {
-      newCol.unshift({
-        id: generateSquare(),
-        isDeleted: false,
-      });
+      const symbol = generateSymbol();
+      if (symbol === GameSymbolsEnum.ZEUS) {
+        const multi = getMultiplierColorAndValue();
+        newCol.unshift({
+          name: symbol,
+          color: multi.color,
+          value: multi.value,
+          isMultiplies: true,
+        });
+      } else {
+        newCol.unshift({
+          name: symbol,
+          isDeleted: false,
+        });
+      }
     }
     return newCol;
   });

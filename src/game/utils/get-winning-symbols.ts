@@ -1,9 +1,11 @@
+import { GameBoardModel } from "../models/game-board.model";
 import { GameSymbolsEnum } from "../models/game-symbols.enum";
-import { SquareModel } from "../models/square-model";
+export type WinningSymbolResult = Record<
+  Exclude<GameSymbolsEnum, GameSymbolsEnum.ZEUS>,
+  number
+>;
 
-export type WinningSymbolResult = Record<GameSymbolsEnum, number>;
-
-export const getWinningSymbols = (board: SquareModel[][]) => {
+export const getWinningSymbols = (board: GameBoardModel) => {
   const gameSymbolsDefaultValues: WinningSymbolResult = {
     blueGem: 0,
     greenGem: 0,
@@ -14,13 +16,15 @@ export const getWinningSymbols = (board: SquareModel[][]) => {
     ring: 0,
     crown: 0,
     hourglass: 0,
-    zeus: 0,
   };
 
   board.forEach((row, _) => {
     row.forEach((square, _) => {
-      if (square.id in gameSymbolsDefaultValues) {
-        gameSymbolsDefaultValues[square.id]++;
+      if (
+        square.name in gameSymbolsDefaultValues &&
+        square.name !== GameSymbolsEnum.ZEUS
+      ) {
+        gameSymbolsDefaultValues[square.name]++;
         return { ...square, isDeleted: true };
       }
     });

@@ -1,29 +1,20 @@
 import { FC } from "react";
 import "./style/multiplierSymbol.css";
-
-const multipliers = [2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 50, 100, 250, 500];
-
-// Color pattern
-const colors = ["green", "red", "purple", "red"];
+import { MultiplierModel } from "../../models/multiplier.model";
+import { MultiplierGradients } from "../../configs/multiplie-gradients";
 
 interface MultiplierSymbolProps {
-  value: number;
-  size?: number;
+  square: MultiplierModel;
 }
 
-export const MultiplierSymbol: FC<MultiplierSymbolProps> = ({
-  value,
-}) => {
+export const MultiplierSymbol: FC<MultiplierSymbolProps> = ({ square }) => {
   return (
     <div className="multipliers-container">
       <div
-        key={value}
         className="multiplier"
-        style={{ backgroundColor: "purple"}}
-
-        // style={{ backgroundColor: colors[index % colors.length] }}
+        style={{ backgroundImage: MultiplierGradients[square.color] }}
       >
-        x{value}
+        x {square.value}
       </div>
     </div>
   );
