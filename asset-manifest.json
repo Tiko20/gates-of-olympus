@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.e6c13ad2.css",
-    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.0c073390.js",
+    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.48e86c9d.css",
+    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.90cdb32d.js",
     "static/js/453.00efb8ba.chunk.js": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js",
+    "static/media/hourglass.png": "https://tiko20.github.io/gates-of-olympus/static/media/hourglass.2b0034ff52bbe3f58b72.png",
+    "static/media/crown.png": "https://tiko20.github.io/gates-of-olympus/static/media/crown.0426bdb1e7006f3b35b7.png",
+    "static/media/yellowGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/yellowGem.af232bd12c182a48c39f.png",
+    "static/media/blueGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/blueGem.d05a5fcf4fa39cc0bb4b.png",
+    "static/media/greenGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/greenGem.8d777c7a498530993255.png",
+    "static/media/zeus-green.png": "https://tiko20.github.io/gates-of-olympus/static/media/zeus-green.4bef4477baa4d1e4322e.png",
     "index.html": "https://tiko20.github.io/gates-of-olympus/index.html",
-    "main.e6c13ad2.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.e6c13ad2.css.map",
-    "main.0c073390.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.0c073390.js.map",
+    "main.48e86c9d.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.48e86c9d.css.map",
+    "main.90cdb32d.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.90cdb32d.js.map",
     "453.00efb8ba.chunk.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.0c073390.js"
+    "static/css/main.48e86c9d.css",
+    "static/js/main.90cdb32d.js"
   ]
 }
