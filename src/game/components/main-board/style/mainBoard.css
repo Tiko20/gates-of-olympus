@@ -1,0 +1,27 @@
+/* Container for the entire board */
+.main-board-container {
+  width: 100%;
+  max-width: 800px; /* adjust as needed */
+  margin: 0 auto;
+}
+
+/* Board wrapper */
+.board-wrapper {
+  width: min-content;
+  height: min-content;
+  aspect-ratio: 6 / 5; /* adjust ratio according to your board layout */
+  display: flex;
+  background-color: purple;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+/* Each column */
+.board-column {
+  width: 100px;
+  aspect-ratio: 1/6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
