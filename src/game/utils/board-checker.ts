@@ -7,9 +7,10 @@ export const boardChecker = (
 ) => {
   const keys = gameSymbols.map((obj) => Object.keys(obj)[0]);
 
-  return board.map((row) =>
+  const newBoard = board.map((row) =>
     row.map((cell) =>
       keys.includes(cell.name) ? { ...cell, isDeleted: true } : cell
     )
   );
+  return newBoard;
 };
