@@ -14,7 +14,7 @@ export const insertNewSquares = (board: GameBoardModel): GameBoardModel => {
           name: symbol,
           color: multi.color,
           value: multi.value,
-          isMultiplies: true,
+          isMultiplies: false,
         });
       } else {
         newCol.unshift({

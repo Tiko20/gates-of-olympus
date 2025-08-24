@@ -1,4 +1,5 @@
 import { GameBoardModel } from "../models/game-board.model";
+import { GameSymbolsEnum } from "../models/game-symbols.enum";
 
 export const boardCleaner = (board: GameBoardModel) => {
   // Count all symbols
@@ -11,12 +12,12 @@ export const boardCleaner = (board: GameBoardModel) => {
   // Find symbols with >= 8
   const symbolsToRemove = new Set(
     Object.entries(counts)
-      .filter(([, value]) => value >= 8)
+      .filter(([key, value]) => value >= 8 && key !== GameSymbolsEnum.ZEUS)
       .map(([key]) => key)
   );
 
   // Return new board with removed cells (null instead of symbol)
-  return board.map((row) =>
-    row.filter((cell) => !symbolsToRemove.has(cell.name))
+  return board.map((col) =>
+    col.filter((cell) => !symbolsToRemove.has(cell.name))
   );
 };
