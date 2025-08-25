@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.48e86c9d.css",
-    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.90cdb32d.js",
+    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.3e0e6cef.css",
+    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.32efce56.js",
     "static/js/453.00efb8ba.chunk.js": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js",
+    "static/media/royal-border.png": "https://tiko20.github.io/gates-of-olympus/static/media/royal-border.fdf2aa3169b81e1e81b0.png",
+    "static/media/header_chronicles_of_olympus_xup.jpg": "https://tiko20.github.io/gates-of-olympus/static/media/header_chronicles_of_olympus_xup.4ba1ed3fb8427bac03e3.jpg",
     "static/media/hourglass.png": "https://tiko20.github.io/gates-of-olympus/static/media/hourglass.2b0034ff52bbe3f58b72.png",
     "static/media/crown.png": "https://tiko20.github.io/gates-of-olympus/static/media/crown.0426bdb1e7006f3b35b7.png",
     "static/media/yellowGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/yellowGem.af232bd12c182a48c39f.png",
@@ -10,12 +12,12 @@
     "static/media/greenGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/greenGem.8d777c7a498530993255.png",
     "static/media/zeus-green.png": "https://tiko20.github.io/gates-of-olympus/static/media/zeus-green.4bef4477baa4d1e4322e.png",
     "index.html": "https://tiko20.github.io/gates-of-olympus/index.html",
-    "main.48e86c9d.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.48e86c9d.css.map",
-    "main.90cdb32d.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.90cdb32d.js.map",
+    "main.3e0e6cef.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.3e0e6cef.css.map",
+    "main.32efce56.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.32efce56.js.map",
     "453.00efb8ba.chunk.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48e86c9d.css",
-    "static/js/main.90cdb32d.js"
+    "static/css/main.3e0e6cef.css",
+    "static/js/main.32efce56.js"
   ]
 }
