@@ -1,27 +1,72 @@
 /* Container for the entire board */
+
+.container {
+  width: 100%;
+  background-image: url("../../../assets/images/header_chronicles_of_olympus_xup.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .main-board-container {
   width: 100%;
-  max-width: 800px; /* adjust as needed */
+  max-width: 800px;
   margin: 0 auto;
 }
 
 /* Board wrapper */
 .board-wrapper {
-  width: min-content;
-  height: min-content;
-  aspect-ratio: 6 / 5; /* adjust ratio according to your board layout */
   display: flex;
-  background-color: purple;
-  border: 2px solid black;
-  overflow: hidden;
+  aspect-ratio: 6/5;
+  flex-wrap: nowrap; /* wrap columns on small screens */
+  justify-content: center; /* center horizontally */
+  background-image: radial-gradient(
+    circle,
+    #662558,
+    #591e47,
+    #4b1937,
+    #3d1429,
+    #2e0f1d
+  );
+  border-image: url(../../../assets/images/royal-border.png);
+  border-image-slice: 75 55 65 52;
+  border-image-width: 70px;
+  border-image-outset: 20px 25px;
+  border-image-repeat: stretch stretch;
 }
 
 /* Each column */
 .board-column {
-  width: 100px;
-  aspect-ratio: 1/6;
+  flex: 1; /* responsive width */
+  gap: 10px;
+  border-left: 2px ridge #9e6c65;
+  border-right: 2px ridge #9e6c65;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   flex-wrap: nowrap;
+}
+
+.board-wrapper > .board-column:first-child {
+  border-left: none; /* remove left border on first column */
+}
+
+.board-wrapper > .board-column:last-child {
+  border-right: none; /* remove right border on last column */
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+  .board-wrapper {
+    border-image-width: 40px;
+    border-image-outset: 12px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .board-wrapper {
+    border-image-width: 25px;
+    border-image-outset: 8px;
+  }
 }
