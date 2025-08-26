@@ -1,5 +1,6 @@
 .square {
-  aspect-ratio: 1 / 1; /* keep them square */
+  aspect-ratio: 1/1;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;

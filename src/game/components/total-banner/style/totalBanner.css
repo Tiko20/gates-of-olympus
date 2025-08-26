@@ -1,0 +1,43 @@
+.total-amount-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* spacing between title & badge */
+}
+
+.tumble-win-title {
+  font-weight: bold;
+  color: gold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: clamp(14px, 2vw, 22px);
+  text-shadow: 1px 1px 2px #000; /* makes it pop */
+}
+
+.tumble-win-badge {
+  width: clamp(200px, 30vw, 600px); /* responsive width */
+  height: clamp(25px, 2.5vw, 50px); /* responsive height */
+  background-image: radial-gradient(
+    circle,
+    #931065,
+    #7c0e54,
+    #660d44,
+    #510a34,
+    #3c0826
+  );
+  border-radius: 8px; /* rounded edges */
+  padding: 4px 12px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: clamp(14px, 1.5vw, 22px);
+  color: gold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* depth */
+  border: 2px ridge gold;
+}
+
+

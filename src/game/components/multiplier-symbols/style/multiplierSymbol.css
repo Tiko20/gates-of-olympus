@@ -4,29 +4,32 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* spacing between multipliers */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 /* Individual multiplier */
 .multiplier {
   position: relative;
   font-weight: bold;
-  font-size: clamp(16px, 4vw, 36px); /* responsive text size */
-  width: clamp(30px, 10vw, 100px); /* responsive fixed min/max size */
-  aspect-ratio: 1 / 1; /* keeps circle square */
+  font-size: clamp(12px, 3vw, 24px); /* responsive text */
+  width: 100%; /* relative to container */
+  aspect-ratio: 1 / 1; /* keeps square */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   color: #dcf732;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
-              0 0 30px rgba(255, 255, 255, 0.3);
+  background-size: cover;
+  background-position: center;
   animation: pulse 1.5s infinite;
 }
 
 /* Pulse animation */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {

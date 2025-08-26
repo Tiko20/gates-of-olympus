@@ -4,7 +4,8 @@ import { generateSymbol } from "./generate-symbol";
 import { getMultiplierColorAndValue } from "./get-multiplier-color-and-value";
 
 export const insertNewSquares = (board: GameBoardModel): GameBoardModel => {
-  return board.map((col, _) => {
+  const filterBoard = board.map((col) => col.filter(Boolean));
+  return filterBoard.map((col, _) => {
     const newCol = [...col];
     while (newCol.length < 5) {
       const symbol = generateSymbol();
