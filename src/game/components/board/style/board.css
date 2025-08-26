@@ -1,23 +1,7 @@
-/* Container for the entire board */
-
-.container {
-  width: 100%;
-  background-image: url("../../../assets/images/header_chronicles_of_olympus_xup.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.main-board-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 /* Board wrapper */
 .board-wrapper {
-  display: flex;
   aspect-ratio: 6/5;
+  display: flex;
   flex-wrap: nowrap; /* wrap columns on small screens */
   justify-content: center; /* center horizontally */
   background-image: radial-gradient(
@@ -37,14 +21,15 @@
 
 /* Each column */
 .board-column {
-  flex: 1; /* responsive width */
-  gap: 10px;
+  flex-grow: 1;
+  aspect-ratio: 1/6;
   border-left: 2px ridge #9e6c65;
   border-right: 2px ridge #9e6c65;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   flex-wrap: nowrap;
+  transition: transform 0.5s ease;
 }
 
 .board-wrapper > .board-column:first-child {

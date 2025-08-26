@@ -3,7 +3,7 @@ import { GameSymbolsEnum } from "../models/game-symbols.enum";
 import { generateSymbol } from "./generate-symbol";
 import { getMultiplierColorAndValue } from "./get-multiplier-color-and-value";
 
-export const createBoard = (): GameBoardModel => {
+export const createBoard = (): Exclude<GameBoardModel, null> => {
   return Array.from({ length: 6 }, (_, i) =>
     Array.from({ length: 5 }, (_, j) => {
       const symbol = generateSymbol();
