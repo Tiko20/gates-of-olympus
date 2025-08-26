@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.3e0e6cef.css",
-    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.32efce56.js",
+    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.fd8a2b46.css",
+    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.01060a33.js",
     "static/js/453.00efb8ba.chunk.js": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js",
+    "static/media/zeus.gif": "https://tiko20.github.io/gates-of-olympus/static/media/zeus.3a4869152c9411bb660a.gif",
+    "static/media/gates-of-olympus-logo.png": "https://tiko20.github.io/gates-of-olympus/static/media/gates-of-olympus-logo.40e27451fc6a7eb7d2bc.png",
     "static/media/royal-border.png": "https://tiko20.github.io/gates-of-olympus/static/media/royal-border.fdf2aa3169b81e1e81b0.png",
     "static/media/header_chronicles_of_olympus_xup.jpg": "https://tiko20.github.io/gates-of-olympus/static/media/header_chronicles_of_olympus_xup.4ba1ed3fb8427bac03e3.jpg",
     "static/media/hourglass.png": "https://tiko20.github.io/gates-of-olympus/static/media/hourglass.2b0034ff52bbe3f58b72.png",
@@ -12,12 +14,12 @@
     "static/media/greenGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/greenGem.8d777c7a498530993255.png",
     "static/media/zeus-green.png": "https://tiko20.github.io/gates-of-olympus/static/media/zeus-green.4bef4477baa4d1e4322e.png",
     "index.html": "https://tiko20.github.io/gates-of-olympus/index.html",
-    "main.3e0e6cef.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.3e0e6cef.css.map",
-    "main.32efce56.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.32efce56.js.map",
+    "main.fd8a2b46.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.fd8a2b46.css.map",
+    "main.01060a33.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.01060a33.js.map",
     "453.00efb8ba.chunk.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e0e6cef.css",
-    "static/js/main.32efce56.js"
+    "static/css/main.fd8a2b46.css",
+    "static/js/main.01060a33.js"
   ]
 }
