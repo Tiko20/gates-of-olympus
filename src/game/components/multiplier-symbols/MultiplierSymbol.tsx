@@ -16,7 +16,7 @@ export const MultiplierSymbol: FC<MultiplierSymbolProps> = ({ square }) => {
           backgroundImage: MultiplierGradients[square.color],
         }}
       >
-        x{square.value } {square.isMultiplies && "!!"}
+        X{square.value }
       </div>
     </div>
   );

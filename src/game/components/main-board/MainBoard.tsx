@@ -69,24 +69,26 @@ export const MainBoard = () => {
     totalMultiplication > 0 ? totalValue * totalMultiplication : totalValue;
 
   return (
-    <div className="main-board-container">
-      <h2 style={{ textAlign: "center", marginBottom: "16px" }}>
-        {finalScore}
-      </h2>
-      <div className="board-wrapper">
-        {mainBoard.map((column, colIndex) => (
-          <div className="board-column" key={colIndex}>
-            {column.map((square, sqIndex) => (
-              <Square square={square} key={sqIndex} />
-            ))}
-          </div>
-        ))}
-      </div>
-      <div className="refresh-button-container">
-        <RefreshButton
-          isDisabled={isProcessingBoard}
-          onRefresh={onRefreshBoard}
-        />
+    <div className="container">
+      <div className="main-board-container">
+        <h2 style={{ textAlign: "center", marginBottom: "16px" }}>
+          {finalScore}
+        </h2>
+        <div className="board-wrapper">
+          {mainBoard.map((column, colIndex) => (
+            <div className="board-column" key={colIndex}>
+              {column.map((square, sqIndex) => (
+                <Square square={square} key={sqIndex} />
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="refresh-button-container">
+          <RefreshButton
+            isDisabled={isProcessingBoard}
+            onRefresh={onRefreshBoard}
+          />
+        </div>
       </div>
     </div>
   );
