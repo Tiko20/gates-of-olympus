@@ -1,8 +1,8 @@
 import "./App.css";
-import { MainBoard } from "./game/components/main-board/MainBoard";
+import { Game } from "./game/Game";
 
 function App() {
-  return <MainBoard />;
+  return <Game />;
 }
 
 export default App;

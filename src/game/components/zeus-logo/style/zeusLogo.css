@@ -1,0 +1,11 @@
+.zeus-logo {
+  display: flex;
+  flex-direction: column; /* logo on top, gif below */
+  align-items: center;
+  gap: 10px;
+}
+
+.zeus-logo img {
+  max-width: 150px;
+  height: auto;
+}

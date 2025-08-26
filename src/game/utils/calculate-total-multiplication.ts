@@ -5,9 +5,8 @@ export const calculateTotalMultiplication = (board: GameBoardModel) => {
   let totalResult = 0;
   board.forEach((col) => {
     col.forEach((symbol) => {
-      if (symbol.name === GameSymbolsEnum.ZEUS) {
+      if (symbol && symbol.name === GameSymbolsEnum.ZEUS) {
         totalResult += symbol.value;
-        
       }
     });
   });
