@@ -1,16 +1,18 @@
-import { GameBoardModel } from "../models/game-board.model";
+import { SquareModel } from "../models/game-board.model";
 import { WinningSymbolResult } from "./get-winning-symbols";
 
 export const boardChecker = (
-  board: GameBoardModel,
+  board: SquareModel[][],
   gameSymbols: WinningSymbolResult[]
-) => {
-  const keys = gameSymbols.map((obj) => Object.keys(obj)[0]);
+): SquareModel[][] => {
+  const keys = gameSymbols.map(obj => Object.keys(obj)[0]);
 
-  const newBoard = board.map((row) =>
-    row.map((cell) =>
-      keys.includes(cell.name) ? { ...cell, isDeleted: true } : cell
-    )
+  return board.map(row =>
+    row.map(cell => {
+      if (cell && keys.includes(cell.name)) {
+        return { ...cell, isDeleted: true };
+      }
+      return cell;
+    })
   );
-  return newBoard;
 };

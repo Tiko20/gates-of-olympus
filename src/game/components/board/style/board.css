@@ -1,0 +1,57 @@
+/* Board wrapper */
+.board-wrapper {
+  aspect-ratio: 6/5;
+  display: flex;
+  flex-wrap: nowrap; /* wrap columns on small screens */
+  justify-content: center; /* center horizontally */
+  background-image: radial-gradient(
+    circle,
+    #662558,
+    #591e47,
+    #4b1937,
+    #3d1429,
+    #2e0f1d
+  );
+  border-image: url(../../../assets/images/royal-border.png);
+  border-image-slice: 75 55 65 52;
+  border-image-width: 70px;
+  border-image-outset: 20px 25px;
+  border-image-repeat: stretch stretch;
+}
+
+/* Each column */
+.board-column {
+  flex-grow: 1;
+  aspect-ratio: 1/6;
+  border-left: 2px ridge #9e6c65;
+  border-right: 2px ridge #9e6c65;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease;
+}
+
+.board-wrapper > .board-column:first-child {
+  border-left: none; /* remove left border on first column */
+}
+
+.board-wrapper > .board-column:last-child {
+  border-right: none; /* remove right border on last column */
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+  .board-wrapper {
+    border-image-width: 40px;
+    border-image-outset: 12px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .board-wrapper {
+    border-image-width: 25px;
+    border-image-outset: 8px;
+  }
+}

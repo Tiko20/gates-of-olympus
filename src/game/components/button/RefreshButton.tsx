@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./style/refreshButton.css";
 
 export interface RefreshButtonProps {
   onRefresh: () => void;
@@ -10,8 +11,12 @@ export const RefreshButton: FC<RefreshButtonProps> = ({
   isDisabled,
 }) => {
   return (
-    <button disabled={isDisabled} onClick={onRefresh}>
-      Refresh
-    </button>
+    <button
+      disabled={isDisabled}
+      onClick={onRefresh}
+      className={`refresh-button ${
+        isDisabled && "refresh-button-disabled-state"
+      }`}
+    ></button>
   );
 };

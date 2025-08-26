@@ -6,7 +6,9 @@ export const boardCleaner = (board: GameBoardModel) => {
   const counts: Record<string, number> = {};
 
   board.flat().forEach((cell) => {
-    counts[cell.name] = (counts[cell.name] || 0) + 1;
+    if (cell) {
+      counts[cell.name] = (counts[cell.name] || 0) + 1;
+    }
   });
 
   // Find symbols with >= 8
@@ -18,6 +20,6 @@ export const boardCleaner = (board: GameBoardModel) => {
 
   // Return new board with removed cells (null instead of symbol)
   return board.map((col) =>
-    col.filter((cell) => !symbolsToRemove.has(cell.name))
+    col.map((cell) => cell && (!symbolsToRemove.has(cell.name) ? cell : null))
   );
 };
