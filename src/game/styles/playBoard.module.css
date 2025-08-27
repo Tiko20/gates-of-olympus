@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-board-container {
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.bottom-section {
+  flex-direction: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.zeus-logo {
+  width: 20%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zeus-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* === Responsive adjustments === */
+
+@media screen and (min-width: 1440px) {
+  .main-board-container {
+    width: 45%;
+  }
+  .zeus-logo {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main-board-container {
+    width: 50%;
+  }
+  .zeus-logo {
+    width: 22%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-board-container {
+    width: 55%;
+  }
+  .zeus-logo {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .main-board-container {
+    width: 70%;
+  }
+  .zeus-logo {
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main-board-container {
+    width: 80%;
+  }
+  .zeus-logo {
+    display: none; /* hide logo on very small screens */
+  }
+}

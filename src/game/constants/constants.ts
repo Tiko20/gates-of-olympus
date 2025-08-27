@@ -17,4 +17,4 @@ export const gameSymbolsSets = new Set<GameSymbolsEnum>([
   GameSymbolsEnum.HOURGLASS,
 ]);
 
-export const GAME_SYMBOLS_ARRAY = Array.from(gameSymbolsSets); //todo
+export const GAME_SYMBOLS_ARRAY = Array.from(gameSymbolsSets);

@@ -9,5 +9,5 @@ export const symbolsValuesConfig = {
   [GameSymbolsEnum.GOBLET]: 1,
   [GameSymbolsEnum.RING]: 1.2,
   [GameSymbolsEnum.HOURGLASS]: 1.5,
-  [GameSymbolsEnum.CROWN]: 2,
+  [GameSymbolsEnum.CROWN]: 4,
 };
