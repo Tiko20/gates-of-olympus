@@ -5,15 +5,19 @@ import { Square } from "./Square";
 
 export interface BoardProps {
   board: GameBoardModel;
+  refreshCount: number;
 }
 
-export const Board: FC<BoardProps> = ({ board }) => {
+export const Board: FC<BoardProps> = ({ board, refreshCount }) => {
   return (
     <div className={styles["board-wrapper"]}>
       {board.map((column, colIndex) => (
         <div className={styles["board-column"]} key={colIndex}>
           {column.map((square, sqIndex) => (
-            <Square square={square} key={sqIndex} />
+            <Square
+              square={square}
+              key={sqIndex + "-" + colIndex + "-" + refreshCount}
+            />
           ))}
         </div>
       ))}

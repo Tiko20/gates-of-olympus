@@ -1,6 +1,6 @@
 import { GameSymbolsEnum } from "./game-symbols.enum";
 
-export interface SymbolModel {
-  name: Exclude<GameSymbolsEnum, GameSymbolsEnum.ZEUS>;
+export interface SymbolModelModel {
+  name: Exclude<GameSymbolsEnum, GameSymbolsEnum.MULTIPLIER>;
   isDeleted: boolean;
 }

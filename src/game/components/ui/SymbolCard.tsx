@@ -1,10 +1,10 @@
 import { FC } from "react";
-import styles from "../../styles/symbolCard.module.css";
-import { SymbolModel } from "../../models/symbol.model";
-import { symbolsImages } from "../../configs/symbols-images.config";
+import { symbolsImagesConfig } from "../../configs/symbols-images.config";
+import { SymbolModelModel } from "../../models/symbol.model";
+import styles from "../../styles/symbol-card.module.css";
 
 interface SymbolCardProps {
-  square: SymbolModel;
+  square: SymbolModelModel;
 }
 
 const SymbolCard: FC<SymbolCardProps> = ({ square }) => {
@@ -14,7 +14,7 @@ const SymbolCard: FC<SymbolCardProps> = ({ square }) => {
         <div className={styles["boom"]}></div>
       ) : (
         <img
-          src={symbolsImages[square.name]}
+          src={symbolsImagesConfig[square.name]}
           alt={square.name}
           className={styles["symbol-card-image"]}
         />

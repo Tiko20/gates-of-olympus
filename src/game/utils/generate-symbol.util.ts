@@ -1,11 +1,17 @@
-import { GAME_SYMBOLS_ARRAY } from "../constants/constants";
+import { gameSymbolsValuesConfig } from "../configs/game-symbols-values.config";
 import { GameSymbolsEnum } from "../models/game-symbols.enum";
 
 export const generateSymbolUtil = (): GameSymbolsEnum => {
-  const symbol =
-    GAME_SYMBOLS_ARRAY[Math.floor(Math.random() * GAME_SYMBOLS_ARRAY.length)];
+  const rand = Math.random();
+  let cumulative = 0;
 
-  if (symbol !== GameSymbolsEnum.ZEUS) return symbol;
+  for (const [symbol, { probability }] of Object.entries(
+    gameSymbolsValuesConfig
+  ) as [GameSymbolsEnum, { value: number; probability: number }][]) {
+    cumulative += probability;
+    if (rand < cumulative) return symbol;
+  }
 
-  return Math.random() > 0.8 ? symbol : generateSymbolUtil();
+  // fallback in case of rounding errors
+  return GameSymbolsEnum.BLUE_GEM;
 };

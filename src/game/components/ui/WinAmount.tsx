@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "../../styles/winAmount.module.css";
+import styles from "../../styles/win-amount.module.css";
 
 interface WinAmountProps {
   amount: number;

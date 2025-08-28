@@ -1,9 +1,5 @@
 import { GameSymbolsEnum } from "../models/game-symbols.enum";
 
-export const MULTIPLIERS_VALUES = [
-  2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 50, 100, 250, 500,
-];
-
 export const gameSymbolsSets = new Set<GameSymbolsEnum>([
   GameSymbolsEnum.BLUE_GEM,
   GameSymbolsEnum.GREEN_GEM,
@@ -12,9 +8,20 @@ export const gameSymbolsSets = new Set<GameSymbolsEnum>([
   GameSymbolsEnum.RED_GEM,
   GameSymbolsEnum.RING,
   GameSymbolsEnum.GOBLET,
-  GameSymbolsEnum.ZEUS,
+  GameSymbolsEnum.MULTIPLIER,
   GameSymbolsEnum.CROWN,
   GameSymbolsEnum.HOURGLASS,
 ]);
-
 export const GAME_SYMBOLS_ARRAY = Array.from(gameSymbolsSets);
+
+export const weightedMultipliers: { value: number; probability: number }[] = [
+  { value: 2, probability: 0.5 },
+  { value: 10, probability: 0.25 },
+  { value: 50, probability: 0.15 },
+  { value: 100, probability: 0.05 },
+  { value: 250, probability: 0.03 },
+  { value: 500, probability: 0.015 },
+  { value: 1000, probability: 0.005 },
+];
+
+

@@ -1,7 +1,7 @@
 import { FC } from "react";
-import styles from "../../styles/multiplierSymbol.module.css";
+import { multiplierImagesConfig } from "../../configs/multiplier.config";
 import { MultiplierModel } from "../../models/multiplier.model";
-import { MultiplierGradients } from "../../configs/multiplier-gradients";
+import styles from "../../styles/multiplier-symbol.module.css";
 
 interface MultiplierSymbolProps {
   square: MultiplierModel;
@@ -10,13 +10,11 @@ interface MultiplierSymbolProps {
 export const MultiplierSymbol: FC<MultiplierSymbolProps> = ({ square }) => {
   return (
     <div className={styles["multipliers-container"]}>
-      <div
-        className={styles["multiplier"]}
-        style={{
-          backgroundImage: MultiplierGradients[square.color],
-        }}
-      >
-        X{square.value}
+      <div className={styles["multiplier"]}>
+        <img
+          src={multiplierImagesConfig[square.value]}
+          alt={`total-${multiplierImagesConfig[square.value]}`}
+        />
       </div>
     </div>
   );

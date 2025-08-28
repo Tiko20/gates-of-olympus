@@ -2,7 +2,7 @@ import { GameBoardModel } from "../models/game-board.model";
 import { GameSymbolsEnum } from "../models/game-symbols.enum";
 
 export type WinningSymbolResult = Record<
-  Exclude<GameSymbolsEnum, GameSymbolsEnum.ZEUS>,
+  Exclude<GameSymbolsEnum, GameSymbolsEnum.MULTIPLIER>,
   number
 >;
 
@@ -23,7 +23,7 @@ export const getWinningSymbols = (board: GameBoardModel) => {
     row.forEach((square, _) => {
       if (
         square!.name in gameSymbolsDefaultValues &&
-        square!.name !== GameSymbolsEnum.ZEUS
+        square!.name !== GameSymbolsEnum.MULTIPLIER
       ) {
         gameSymbolsDefaultValues[square!.name]++;
         return { ...square, isDeleted: true };

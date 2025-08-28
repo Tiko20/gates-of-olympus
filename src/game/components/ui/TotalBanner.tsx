@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import styles from "../../styles/totalBanner.module.css";
+import styles from "../../styles/total-banner.module.css";
 
 interface TotalBannerProps {
   totalMultiplication: number;
@@ -16,19 +16,25 @@ export const TotalBanner: FC<TotalBannerProps> = ({
   const [displayedScore, setDisplayedScore] = useState(0);
 
   useEffect(() => {
+    if (finalScore === 0) {
+      setDisplayedScore(0);
+      return;
+    }
+
     let start: number | null = null;
-    const duration = 800; // animation duration in ms
+    const startValue = displayedScore; // continue from current value
+    const diff = finalScore - startValue;
+    const duration = 300;
 
     const step = (timestamp: number) => {
       if (!start) start = timestamp;
       const progress = Math.min((timestamp - start) / duration, 1);
-      setDisplayedScore(Math.floor(finalScore * progress));
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
+      setDisplayedScore(Math.floor(startValue + diff * progress));
+      if (progress < 1) requestAnimationFrame(step);
     };
 
     requestAnimationFrame(step);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finalScore]);
 
   return (

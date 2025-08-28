@@ -8,5 +8,5 @@ export enum GameSymbolsEnum {
   RING = "ring",
   HOURGLASS = "hourglass",
   CROWN = "crown",
-  ZEUS = "zeus",
+  MULTIPLIER = "multiplier",
 }

@@ -1,23 +1,24 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import style from "../../styles/playBoard.module.css"
-import { createBoardUtil } from "../../utils/create-board.util";
-import { getWinningSymbols } from "../../utils/get-winning-symbols.util";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Logo from "../../assets/images/gates-of-olympus-logo.png";
+import Zeus from "../../assets/images/zeus.gif";
+import { GameBoardModel } from "../../models/game-board.model";
+import style from "../../styles/play-board.module.css";
 import { boardCheckerUtil } from "../../utils/board-checker.utils";
 import { boardCleanerUtil } from "../../utils/board-cleaner.util";
-import { insertNewSquares } from "../../utils/insert-new-squares.util";
-import { RefreshButton } from "../ui/RefreshButton";
-import { GameBoardModel } from "../../models/game-board.model";
-import { calculateTotalValueUtil } from "../../utils/calculate-total-values.util";
 import { calculateTotalMultiplicationUtil } from "../../utils/calculate-total-multiplication.util";
+import { calculateTotalValueUtil } from "../../utils/calculate-total-values.util";
+import { createBoardUtil } from "../../utils/create-board.util";
+import { getWinningSymbols } from "../../utils/get-winning-symbols.util";
+import { insertNewSquares } from "../../utils/insert-new-squares.util";
 import { Board } from "../layout/Board";
-import { TotalBanner } from "../ui/TotalBanner";
 import { BetInfo } from "../ui/BetInfo";
+import { RefreshButton } from "../ui/RefreshButton";
+import { TotalBanner } from "../ui/TotalBanner";
 import { WinAmount } from "../ui/WinAmount";
-import Zeus from "../../assets/images/zeus.gif";
-import Logo from "../../assets/images/gates-of-olympus-logo.png";
 
 export const PlayBoard = () => {
   const amount = 100;
+  const refreshCount = useRef<number>(0);
   const board = createBoardUtil();
   const [credit, setCredit] = useState(10000);
   const [mainBoard, setMainBoard] = useState<GameBoardModel>(board);
@@ -28,6 +29,8 @@ export const PlayBoard = () => {
   const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
   const onRefreshBoard = useCallback(() => {
+    refreshCount.current++;
+
     const runCycle = async (
       currentBoard: GameBoardModel
     ): Promise<GameBoardModel> => {
@@ -74,11 +77,13 @@ export const PlayBoard = () => {
   }, [amount, board]);
 
   const totalAmount = useMemo(() => amount * totalValue, [amount, totalValue]);
+
   const finalScore = useMemo(
     () =>
       totalMultiplication > 0 ? totalMultiplication * totalAmount : totalAmount,
     [totalAmount, totalMultiplication]
   );
+
   useEffect(() => {
     if (!isProcessingBoard) {
       setCredit((value) => value + finalScore);
@@ -92,7 +97,7 @@ export const PlayBoard = () => {
           totalAmount={totalAmount}
           totalMultiplication={totalMultiplication}
         />
-        <Board board={mainBoard} />
+        <Board board={mainBoard} refreshCount={refreshCount.current} />
         <div className={style["bottom-section"]}>
           <BetInfo bet={amount} credit={credit} />
           <WinAmount amount={finalScore} />

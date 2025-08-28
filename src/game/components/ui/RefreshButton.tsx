@@ -1,5 +1,6 @@
 import { FC } from "react";
-import styles from "../../styles/refreshButton.module.css";
+import styles from "../../styles/refresh-button.module.css";
+
 export interface RefreshButtonProps {
   onRefresh: () => void;
   isDisabled: boolean;

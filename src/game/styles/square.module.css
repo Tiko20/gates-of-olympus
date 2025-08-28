@@ -8,6 +8,8 @@
   overflow: hidden;
   transition: transform 0.2s ease;
   padding: 10%;
+  position: relative;
+  overflow: hidden;
 }
 
 .square.deleted {

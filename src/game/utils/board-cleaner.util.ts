@@ -14,7 +14,7 @@ export const boardCleanerUtil = (board: GameBoardModel) => {
   // Find symbols with >= 8
   const symbolsToRemove = new Set(
     Object.entries(counts)
-      .filter(([key, value]) => value >= 8 && key !== GameSymbolsEnum.ZEUS)
+      .filter(([key, value]) => value >= 8 && key !== GameSymbolsEnum.MULTIPLIER)
       .map(([key]) => key)
   );
 
