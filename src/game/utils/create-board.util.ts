@@ -9,7 +9,6 @@ export const createBoardUtil = (): Exclude<GameBoardModel, null> => {
       const symbol = generateSymbolUtil();
       if (symbol === GameSymbolsEnum.MULTIPLIER) {
         const multiplier = getMultiplierValueUtil();
-        console.log(multiplier)
         return {
           name: symbol,
           isMultiplies: false,
