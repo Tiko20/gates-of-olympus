@@ -1,9 +1,16 @@
 {
   "files": {
-    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.fd8a2b46.css",
-    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.01060a33.js",
+    "main.css": "https://tiko20.github.io/gates-of-olympus/static/css/main.82c911aa.css",
+    "main.js": "https://tiko20.github.io/gates-of-olympus/static/js/main.300ab926.js",
     "static/js/453.00efb8ba.chunk.js": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js",
     "static/media/zeus.gif": "https://tiko20.github.io/gates-of-olympus/static/media/zeus.3a4869152c9411bb660a.gif",
+    "static/media/x-1000.png": "https://tiko20.github.io/gates-of-olympus/static/media/x-1000.c1002070f631272a153c.png",
+    "static/media/x-2.png": "https://tiko20.github.io/gates-of-olympus/static/media/x-2.a3ed638966a9fce077d7.png",
+    "static/media/x-10.png": "https://tiko20.github.io/gates-of-olympus/static/media/x-10.3adeb94c1122ec15e0f3.png",
+    "static/media/x-50.png": "https://tiko20.github.io/gates-of-olympus/static/media/x-50.2edaf3d86e403089d854.png",
+    "static/media/x-100.png": "https://tiko20.github.io/gates-of-olympus/static/media/x-100.b0b25436000faf778fa1.png",
+    "static/media/x-250.png": "https://tiko20.github.io/gates-of-olympus/static/media/x-250.16853cb9addf4552e1f8.png",
+    "static/media/x-500.png": "https://tiko20.github.io/gates-of-olympus/static/media/x-500.428de1a96f9bb37206e0.png",
     "static/media/gates-of-olympus-logo.png": "https://tiko20.github.io/gates-of-olympus/static/media/gates-of-olympus-logo.40e27451fc6a7eb7d2bc.png",
     "static/media/royal-border.png": "https://tiko20.github.io/gates-of-olympus/static/media/royal-border.fdf2aa3169b81e1e81b0.png",
     "static/media/header_chronicles_of_olympus_xup.jpg": "https://tiko20.github.io/gates-of-olympus/static/media/header_chronicles_of_olympus_xup.4ba1ed3fb8427bac03e3.jpg",
@@ -12,14 +19,13 @@
     "static/media/yellowGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/yellowGem.af232bd12c182a48c39f.png",
     "static/media/blueGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/blueGem.d05a5fcf4fa39cc0bb4b.png",
     "static/media/greenGem.png": "https://tiko20.github.io/gates-of-olympus/static/media/greenGem.8d777c7a498530993255.png",
-    "static/media/zeus-green.png": "https://tiko20.github.io/gates-of-olympus/static/media/zeus-green.4bef4477baa4d1e4322e.png",
     "index.html": "https://tiko20.github.io/gates-of-olympus/index.html",
-    "main.fd8a2b46.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.fd8a2b46.css.map",
-    "main.01060a33.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.01060a33.js.map",
+    "main.82c911aa.css.map": "https://tiko20.github.io/gates-of-olympus/static/css/main.82c911aa.css.map",
+    "main.300ab926.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/main.300ab926.js.map",
     "453.00efb8ba.chunk.js.map": "https://tiko20.github.io/gates-of-olympus/static/js/453.00efb8ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd8a2b46.css",
-    "static/js/main.01060a33.js"
+    "static/css/main.82c911aa.css",
+    "static/js/main.300ab926.js"
   ]
 }
